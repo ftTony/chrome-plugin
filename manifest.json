@@ -6,19 +6,24 @@
     "author": "tony",
     "icons":
 	{
-        "32": "images/icon.png"
+        "32": "./src/images/icon.png"
     },
     "background":{
-        "page":"background.html"
+        "page":"./src/background.html"
     },
+    "homepage_url": "https://www.q-stock.cn",
     "browser_action": 
 	{
-        "default_icon": "images/icon.png"
+        "default_icon": "./src/images/icon.png",
+        "default_title": "行情小助手",
+        "default_popup": "./src/popup.html"
     },
     "content_scripts": 
 	[
 		{
-
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["./src/js/index.js"],
+            "css":["./src/css/index.css"]
         }
     ],
     "permissions":
@@ -32,10 +37,8 @@
 		"http://*/*", 
 		"https://*/*" 
     ],
-    "options_page": "options.html",
 	"chrome_url_overrides":
 	{
-		"newtab": "newtab.html"
-	},
-    "default_locale": "zh_CN"
+		"newtab": "./src/newtab.html"
+    }
 }
