@@ -15,8 +15,7 @@
     "browser_action": 
 	{
         "default_icon": "./src/images/icon.png",
-        "default_title": "行情小助手",
-        "default_popup": "./src/popup.html"
+        "default_title": "行情小助手"
     },
     "content_scripts": 
 	[
@@ -39,6 +38,6 @@
     ],
 	"chrome_url_overrides":
 	{
-		"newtab": "./src/newtab.html"
+		"newtab": "./src/index.html"
     }
 }
