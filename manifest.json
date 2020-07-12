@@ -3,6 +3,7 @@
     "name": "港美股行情",
     "version": "1.0.0",
     "description": "摸鱼小能手",
+    "author": "tony",
     "icons":
 	{
         "32": "images/icon.png"
@@ -13,5 +14,28 @@
     "browser_action": 
 	{
         "default_icon": "images/icon.png"
-    }
+    },
+    "content_scripts": 
+	[
+		{
+
+        }
+    ],
+    "permissions":
+	[
+        "contextMenus", 
+		"tabs", 
+		"notifications", 
+		"webRequest", 
+		"webRequestBlocking",
+		"storage", 
+		"http://*/*", 
+		"https://*/*" 
+    ],
+    "options_page": "options.html",
+	"chrome_url_overrides":
+	{
+		"newtab": "newtab.html"
+	},
+    "default_locale": "zh_CN"
 }
